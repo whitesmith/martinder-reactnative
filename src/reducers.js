@@ -7,6 +7,7 @@ import { PUSH_SCREEN, POP_SCREEN } from './actions'
 }
 */
 const defaultNavigationState = {index: 0, routes: [{key: 'Screen1'}]}
+const defaultEvents = [{title: "Football", required_number: 10}, {title: "Basquet", required_number: 6}]
 
 function navigationState(previousNavigationState = defaultNavigationState, action) {
   switch (action.type) {
@@ -29,8 +30,19 @@ function navigationState(previousNavigationState = defaultNavigationState, actio
   }
 }
 
+
+function events(previousEvents = defaultEvents, action){
+  switch (action.type) {
+    case SET_EVENTS:
+      return action.events;
+    default:
+      return previousEvents;
+  }
+}
+
 const MartinderApp = combineReducers({
-  navigationState
+  navigationState,
+  events
 })
 
 export default MartinderApp
