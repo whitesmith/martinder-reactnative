@@ -4,7 +4,7 @@ import {
   Text,
   View,
   Button,
-  Alert
+  Alert,
 } from 'react-native';
 
 import styles from './styles';
@@ -14,7 +14,7 @@ const onPressEvents = () => {
 };
 
 const onPressCreateEvent = () => {
-  Alert.alert('Events button pressed!');
+  Alert.alert('Create event button pressed!');
 };
 
 function setup() {
@@ -26,11 +26,11 @@ function setup() {
             Welcome to Martinder!
           </Text>
           <Button
-            onPress={onPressEvents}
+            onPress={onPressCreateEvent}
             title="Create event"
           />
           <Button
-            onPress={onPressCreateEvent}
+            onPress={onPressEvents}
             title="Events"
           />
         </View>
