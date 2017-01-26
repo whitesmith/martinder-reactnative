@@ -9,23 +9,34 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
+  Alert
 } from 'react-native';
+
+const onPressEvents = () => {
+  Alert.alert('Events button pressed!');
+};
+
+const onPressCreateEvent = () => {
+  Alert.alert('Events button pressed!');
+};
 
 export default class martinder extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Martinder!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Button
+          onPress={onPressEvents}
+          title="Create event"
+        />
+        <Button
+          onPress={onPressCreateEvent}
+          title="Events"
+        />
       </View>
     );
   }
