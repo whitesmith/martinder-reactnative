@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import NavBar from './NavBar';
 import TabBar from './TabBar';
 import EventCell from './EventCell';
 import styles from '../styles'
@@ -17,11 +18,7 @@ class EventList extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style={styles.header}>
-          <Image style={styles.logo}
-            source={require('../../res/img/QlutchLogo.png')}
-          />
-        </View>
+        <NavBar />
         <ScrollView style={styles.scrollView}>
           <Text style={styles.subheaderTitle}>
             {this.props.subHeader}

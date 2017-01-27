@@ -1,8 +1,22 @@
 import { StyleSheet } from 'react-native';
 
+const colors = {
+  brand: '#5311B4',
+}
+
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#5311B4',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: colors.brand,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowRadius: 3,
+    shadowOpacity: 0.5,
+    zIndex: 1,
   },
   headerTitle: {
     fontSize: 20,
@@ -49,7 +63,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   scrollView: {
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+  },
+  scrollViewColored: {
+    backgroundColor: colors.brand,
   },
   logo: {
     width: 100,
@@ -103,6 +120,107 @@ const styles = StyleSheet.create({
   rowParticipantsTotal: {
     color: '#5311B4',
   },
+  backButton: {
+  },
+  detailHeader: {
+    padding: 12,
+    backgroundColor: '#5311B4',
+  },
+  detailSubheader: {
+    padding: 12,
+    backgroundColor: '#fff',
+  },
+  detailTitle: {
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#fff',
+  },
+  detailCategory: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  detailDateTime: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#B5B5B5',
+  },
+  detailLocal: {
+    fontSize: 12,
+    fontFamily: 'Poppins-Regular',
+  },
+  detailParticipants: {
+    fontFamily: 'Poppins-SemiBold',
+    textAlign: 'right',
+  },
+  detailParticipantsTitle: {
+    fontSize: 10,
+    color: '#fff',
+  },
+  detailParticipantsGoing: {
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  detailParticipantsTotal: {
+    color: '#63FFAF',
+  },
+  detailDescription: {
+    height: 320,
+    backgroundColor: '#fff',
+    padding: 10,
+  },
+  textInputTitle: {
+    height: 44,
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#fff',
+  },
+  textInputCategory: {
+    height: 44,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  inputParticipants: {
+    fontSize: 10,
+    color: '#fff',
+    textDecorationLine: 'underline',
+  },
+  inputDateTime: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#B5B5B5',
+    textDecorationLine: 'underline',
+  },
+  inputLocal: {
+    fontSize: 12,
+    fontFamily: 'Poppins-Regular',
+    textDecorationLine: 'underline',
+  },
+  footer: {
+    padding: 10,
+    backgroundColor: '#fff',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowRadius: 6,
+    shadowOpacity: 0.2,
+    borderColor: '#B5B5B5',
+    borderWidth: 0.5,
+  },
+  button: {
+    width: 120,
+    padding: 15,
+    paddingTop: 10,
+    paddingBottom: 4,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.brand,
+    borderColor: colors.brand,
+    borderWidth: 2.5,
+    borderRadius: 22,
+    alignSelf: 'center',
+    textAlign: 'center',
+    letterSpacing: 2,
+  }
 });
 
 module.exports = styles;

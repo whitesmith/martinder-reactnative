@@ -29,6 +29,9 @@
 		D74C1E831E3A841C00B15335 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D74C1E7E1E3A841C00B15335 /* Poppins-Medium.ttf */; };
 		D74C1E841E3A841C00B15335 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D74C1E7F1E3A841C00B15335 /* Poppins-Regular.ttf */; };
 		D74C1E851E3A841C00B15335 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D74C1E801E3A841C00B15335 /* Poppins-SemiBold.ttf */; };
+		D74C1E9E1E3B8B2200B15335 /* DatePickerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C1E9D1E3B8B2200B15335 /* DatePickerDialog.m */; };
+		D74C1EBE1E3BA55C00B15335 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C1EBC1E3BA55C00B15335 /* DatePickerViewController.m */; };
+		D74C1EBF1E3BA55C00B15335 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C1EBD1E3BA55C00B15335 /* DatePickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +247,11 @@
 		D74C1E7E1E3A841C00B15335 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../res/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		D74C1E7F1E3A841C00B15335 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../res/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D74C1E801E3A841C00B15335 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../res/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D74C1E9C1E3B8B2200B15335 /* DatePickerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerDialog.h; path = martinder/Modules/DatePickerDialog.h; sourceTree = "<group>"; };
+		D74C1E9D1E3B8B2200B15335 /* DatePickerDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerDialog.m; path = martinder/Modules/DatePickerDialog.m; sourceTree = "<group>"; };
+		D74C1EBB1E3BA55C00B15335 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerViewController.h; path = martinder/DatePickerViewController.h; sourceTree = "<group>"; };
+		D74C1EBC1E3BA55C00B15335 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerViewController.m; path = martinder/DatePickerViewController.m; sourceTree = "<group>"; };
+		D74C1EBD1E3BA55C00B15335 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatePickerViewController.xib; path = martinder/DatePickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +367,10 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				D74C1EBB1E3BA55C00B15335 /* DatePickerViewController.h */,
+				D74C1EBC1E3BA55C00B15335 /* DatePickerViewController.m */,
+				D74C1EBD1E3BA55C00B15335 /* DatePickerViewController.xib */,
+				D74C1EB81E3B8B2D00B15335 /* Modules */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -451,6 +463,15 @@
 				00E356EE1AD99517003FC87E /* martinderTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D74C1EB81E3B8B2D00B15335 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D74C1E9C1E3B8B2200B15335 /* DatePickerDialog.h */,
+				D74C1E9D1E3B8B2200B15335 /* DatePickerDialog.m */,
+			);
+			name = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -766,6 +787,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74C1EBF1E3BA55C00B15335 /* DatePickerViewController.xib in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				D74C1E811E3A841C00B15335 /* Poppins-Bold.ttf in Resources */,
@@ -808,6 +830,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74C1EBE1E3BA55C00B15335 /* DatePickerViewController.m in Sources */,
+				D74C1E9E1E3B8B2200B15335 /* DatePickerDialog.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
