@@ -16,23 +16,23 @@ class EventCell extends Component {
       <TouchableOpacity>
         <View style={styles.row}>
           <Text style={styles.rowCategory}>
-            SPORTS
+            {this.props.event.category}
           </Text>
           <Text style={styles.rowTitle}>
-            {this.props.title}
+            {this.props.event.title}
           </Text>
           <Text style={styles.rowDateTime}>
             23 Jan 2017 . 18h45
           </Text>
           <Text style={styles.rowLocal}>
-            Pavilhão Desportivo
+            {this.props.event.location}
           </Text>
           <Text style={styles.rowParticipants}>
             <Text style={styles.rowParticipantsTitle}>
               GOING&nbsp;&nbsp;
             </Text>
             <Text style={styles.rowParticipantsGoing}>
-              5
+              {this.props.event.users.length}
             </Text>
             <Text style={styles.rowParticipantsTotal}>
               /10

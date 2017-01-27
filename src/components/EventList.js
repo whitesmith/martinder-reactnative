@@ -36,7 +36,7 @@ class EventList extends Component {
               return <EventCell
                 key={each.id}
                 index={index}
-                title={each.title}
+                event={each}
               />
             })
           }
@@ -57,7 +57,9 @@ class EventListContainer extends Component {
   constructor(props){
     super(props)
     API.events().then(function(response){
-      store.dispatch( set_events( response ) );
+      console.log("\n\n\n")
+      console.log(response)
+      store.dispatch( set_events( response.data ) );
     })
   }
   render(){

@@ -1,4 +1,4 @@
-const API_PATH = "http://10.0.2.2:3000"
+const API_PATH = "http://95.85.18.223:4000/api"
 
 const toJson = (response) => {
   return response.json();
@@ -6,7 +6,7 @@ const toJson = (response) => {
 
 const API = {
   events: function(){
-    return fetch(API_PATH + '/posts', {
+    return fetch(API_PATH + '/events', {
       method: 'GET',
       headers: {
         'Accept': 'application/json'

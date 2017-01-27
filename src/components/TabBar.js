@@ -12,43 +12,36 @@ import styles from '../styles';
 import store from '../store';
 import { push_screen } from '../actions'
 
-class TabBar extends Component {
-  create(){
-    store.dispatch( push_screen( "CreateEvent" ) );
+const feed_img = require('../../res/img/Feed.png')
+const events_img = require('../../res/img/Events.png')
+const create_img = require('../../res/img/Create.png')
+
+class TabButton extends Component {
+  onPress(){
+    console.log(this.props.link)
+    //store.dispatch( push_screen( this.props.link ));
   }
   render() {
     return (
+      <TouchableOpacity style={styles.tabItem} onPress={this.onPress.bind(this)}>
+        <View>
+          <Image style={styles.tabItemImage} source={this.props.icon} />
+          <Text style={styles.tabTitle}>
+            {this.props.text}
+          </Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
+}
+
+class TabBar extends Component {
+  render() {
+    return (
       <View style={styles.tabBar}>
-        <TouchableOpacity style={styles.tabItem}>
-          <View>
-            <Image style={styles.tabItemImage}
-              source={require('../../res/img/Feed.png')}
-            />
-            <Text style={styles.tabTitle}>
-            Feed
-            </Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.tabItem}>
-          <View>
-            <Image style={styles.tabItemImage}
-              source={require('../../res/img/Events.png')}
-            />
-            <Text style={styles.tabTitle}>
-            Going
-            </Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.tabItem} onPress={this.create}>
-          <View>
-            <Image style={styles.tabItemImage}
-              source={require('../../res/img/Create.png')}
-            />
-            <Text style={styles.tabTitle}>
-            Create
-            </Text>
-          </View>
-        </TouchableOpacity>
+        <TabButton icon={feed_img} text="Feed" />
+        <TabButton icon={events_img} text="Going" />
+        <TabButton icon={create_img} text="Create" link="CreateEvent"/>
       </View>
     );
   }
