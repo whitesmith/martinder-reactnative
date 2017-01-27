@@ -6,8 +6,8 @@ import { NavigationExperimental } from 'react-native';
 import store from './store';
 import styles from './styles';
 
-import { Screen1, Screen2, Screen3 } from './components/ScreenExamples';
 import EventList from './components/EventList';
+import CreateEvent from './components/CreateEvent';
 
 const {
   CardStack: NavigationCardStack,
@@ -26,12 +26,12 @@ class Navigator extends Component {
     switch (sceneProps.scene.route.key) {
       case 'EventList':
         return <EventList />;
-      case 'Screen1':
-        return <Screen1 />;
+      case 'CreateEvent':
+        return <CreateEvent />;
       case 'Screen2':
-        return <Screen2 />;
+        return <EventList />;
       default:
-        return <Screen3 />;
+        return <EventList />;
     }
   }
 }

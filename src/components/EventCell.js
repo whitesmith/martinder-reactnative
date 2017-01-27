@@ -19,7 +19,7 @@ class EventCell extends Component {
             SPORTS
           </Text>
           <Text style={styles.rowTitle}>
-            Futebol 5x5
+            {this.props.title}
           </Text>
           <Text style={styles.rowDateTime}>
             23 Jan 2017 . 18h45

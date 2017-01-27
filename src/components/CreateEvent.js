@@ -4,7 +4,7 @@ import {
   Text,
   Button
 } from 'react-native';
-
+import styles from '../styles';
 const onPressSave = () => {
   Alert.alert('Save button pressed!');
 };
@@ -14,7 +14,7 @@ class CreateEvent extends Component {
     return (
       <ScrollView style={styles.scrollView}>
         <Text style={styles.row}>
-          Route: {this.props.route.key}
+          Route:
         </Text>
         <Button
           onPress={onPressSave}

@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
-import EventItem from './EventItem'
 import { connect } from 'react-redux';
-import { View, Button } from 'react-native';
+import {
+  ScrollView,
+  View,
+  Text,
+  Button,
+  Image,
+  TouchableHighlight,
+  TouchableOpacity,
+} from 'react-native';
+import styles from '../styles';
+import EventCell from './EventCell';
+import TabBar from './TabBar';
 
 import store from '../store';
 import { set_events } from '../actions'
@@ -9,20 +19,29 @@ import { set_events } from '../actions'
 import API from '../helpers/Api'
 
 class EventList extends Component {
-
   render() {
     return (
-      <View>
-        {
-          this.props.events.map((each, index) => {
-            return <EventItem
-              key={each.id}
-              index={index}
-              title={each.title}
-              required_number={each.required_number}
-            />
-          })
-        }
+      <View style={{flex: 1}}>
+        <View style={styles.header}>
+          <Image style={styles.logo}
+            source={require('../../res/img/QlutchLogo.png')}
+          />
+        </View>
+        <ScrollView style={styles.scrollView}>
+          <Text style={styles.subheaderTitle}>
+            Are these the events you're looking for?
+          </Text>
+          {
+            this.props.events.map((each, index) => {
+              return <EventCell
+                key={each.id}
+                index={index}
+                title={each.title}
+              />
+            })
+          }
+        </ScrollView>
+        <TabBar />
       </View>
     );
   }

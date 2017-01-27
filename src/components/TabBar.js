@@ -9,8 +9,13 @@ import {
 } from 'react-native';
 
 import styles from '../styles';
+import store from '../store';
+import { push_screen } from '../actions'
 
 class TabBar extends Component {
+  create(){
+    store.dispatch( push_screen( "CreateEvent" ) );
+  }
   render() {
     return (
       <View style={styles.tabBar}>
@@ -34,7 +39,7 @@ class TabBar extends Component {
             </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.tabItem}>
+        <TouchableOpacity style={styles.tabItem} onPress={this.create}>
           <View>
             <Image style={styles.tabItemImage}
               source={require('../../res/img/Create.png')}
