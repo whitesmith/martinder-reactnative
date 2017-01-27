@@ -1,13 +1,12 @@
 import { combineReducers } from 'redux'
-import { PUSH_SCREEN, POP_SCREEN } from './actions'
+import { PUSH_SCREEN, POP_SCREEN, SET_EVENTS} from './actions'
 
 /*
 {
   navigationState: {index: 0, routes: [{key: 'main'}]}
 }
 */
-const defaultNavigationState = {index: 0, routes: [{key: 'Screen1'}]}
-const defaultEvents = [{title: "Football", required_number: 10}, {title: "Basquet", required_number: 6}]
+const defaultNavigationState = {index: 0, routes: [{key: 'EventList'}]}
 
 function navigationState(previousNavigationState = defaultNavigationState, action) {
   switch (action.type) {
@@ -31,7 +30,7 @@ function navigationState(previousNavigationState = defaultNavigationState, actio
 }
 
 
-function events(previousEvents = defaultEvents, action){
+function events(previousEvents = [], action){
   switch (action.type) {
     case SET_EVENTS:
       return action.events;

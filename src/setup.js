@@ -7,6 +7,7 @@ import store from './store';
 import styles from './styles';
 
 import { Screen1, Screen2, Screen3 } from './components/ScreenExamples';
+import EventList from './components/EventList';
 
 const {
   CardStack: NavigationCardStack,
@@ -23,6 +24,8 @@ class Navigator extends Component {
   }
   _renderScene(sceneProps) {
     switch (sceneProps.scene.route.key) {
+      case 'EventList':
+        return <EventList />;
       case 'Screen1':
         return <Screen1 />;
       case 'Screen2':
