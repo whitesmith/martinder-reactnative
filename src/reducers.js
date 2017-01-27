@@ -17,13 +17,17 @@ function navigationState(previousNavigationState = defaultNavigationState, actio
       }
       return new_state
     case POP_SCREEN:
-      new_routes = [...previousNavigationState.routes];
-      new_routes.pop();
-      new_state = {
-        index: previousNavigationState.index-1,
-        routes: new_routes
+      if(previousNavigationState.index == 0){
+        return previousNavigationState;
+      } else{
+        new_routes = [...previousNavigationState.routes];
+        new_routes.pop();
+        new_state = {
+          index: previousNavigationState.index-1,
+          routes: new_routes
+        }
+        return new_state;
       }
-      return new_state
     default:
       return defaultNavigationState
   }

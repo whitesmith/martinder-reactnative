@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Provider } from 'react-redux';
-import { NavigationExperimental } from 'react-native';
+import { NavigationExperimental, BackAndroid } from 'react-native';
 
 import store from './store';
+import { pop_screen } from './actions'
+
 import styles from './styles';
 
 import EventList from './components/EventList';
@@ -14,9 +16,18 @@ const {
 } = NavigationExperimental;
 
 class Navigator extends Component {
+  constructor(props){
+    super(props)
+    BackAndroid.addEventListener("hardwareBackPress", this.onBack)
+  }
+  onBack(){
+    store.dispatch( pop_screen() );
+    return true;
+  }
   render() {
     return (
       <NavigationCardStack
+        onNavigateBack={this.onBack}
         navigationState={this.props.navigationState}
         renderScene={this._renderScene}
       />
