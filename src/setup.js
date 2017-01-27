@@ -9,6 +9,7 @@ import { pop_screen } from './actions'
 import styles from './styles';
 
 import EventList from './components/EventList';
+import EventDetails from './components/EventDetails';
 import CreateEvent from './components/CreateEvent';
 
 const {
@@ -39,8 +40,8 @@ class Navigator extends Component {
         return <EventList />;
       case 'CreateEvent':
         return <CreateEvent />;
-      case 'Screen2':
-        return <EventList />;
+      case 'EventDetails':
+        return <EventDetails />;
       default:
         return <EventList />;
     }
