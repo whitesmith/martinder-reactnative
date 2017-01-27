@@ -1,26 +1,57 @@
 import React, { Component } from 'react';
 import {
   ScrollView,
+  View,
   Text,
-  Button
+  TextInput,
+  Image,
+  TouchableOpacity,
 } from 'react-native';
 import styles from '../styles';
-const onPressSave = () => {
-  Alert.alert('Save button pressed!');
-};
+import NavBar from './NavBar';
 
 class CreateEvent extends Component {
   render() {
     return (
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.row}>
-          Route:
-        </Text>
-        <Button
-          onPress={onPressSave}
-          title="Save"
-        />
-      </ScrollView>
+      <View style={{flex: 1}}>
+        <NavBar/>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.detailHeader}>
+            <TextInput style={styles.textInputCategory}
+              placeholder='TYPE OF EVENT'>
+            </TextInput>
+            <TextInput style={styles.textInputTitle}
+              placeholder='Event name'>
+            </TextInput>
+            <Text style={styles.detailParticipants}>
+              <Text style={styles.inputParticipants}>
+                PEOPLE NEEDED
+              </Text>
+            </Text>
+          </View>
+          <View style={styles.detailSubheader}>
+            <Text style={styles.detailDateTime}>
+              Set Date
+            </Text>
+            <Text style={styles.detailDateTime}>
+              Set Hour
+            </Text>
+            <Text style={styles.detailLocal}>
+              Select Localization
+            </Text>
+          </View>
+          <Text>
+             Description
+          </Text>
+        </ScrollView>
+        <View style={styles.footer}>
+          <TouchableOpacity>
+            <Text style={styles.button}>
+              CREATE
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     );
   }
 }

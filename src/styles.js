@@ -1,10 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+const colors = {
+  brand: '#5311B4',
+}
+
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: '#5311B4',
+    backgroundColor: colors.brand,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -155,6 +159,49 @@ const styles = StyleSheet.create({
   detailParticipantsTotal: {
     color: '#63FFAF',
   },
+  textInputTitle: {
+    height: 44,
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#fff',
+  },
+  textInputCategory: {
+    height: 44,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  inputParticipants: {
+    fontSize: 10,
+    color: '#fff',
+    textDecorationLine: 'underline',
+  },
+  footer: {
+    padding: 10,
+    backgroundColor: '#fff',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowRadius: 6,
+    shadowOpacity: 0.2,
+    borderColor: '#B5B5B5',
+    borderWidth: 0.5,
+  },
+  button: {
+    width: 120,
+    padding: 15,
+    paddingTop: 10,
+    paddingBottom: 4,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.brand,
+    borderColor: colors.brand,
+    borderWidth: 2.5,
+    borderRadius: 22,
+    alignSelf: 'center',
+    textAlign: 'center',
+    letterSpacing: 2,
+  }
 });
 
 module.exports = styles;
