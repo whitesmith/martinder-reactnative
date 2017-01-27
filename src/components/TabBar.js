@@ -18,8 +18,8 @@ const create_img = require('../../res/img/Create.png')
 
 class TabButton extends Component {
   onPress(){
-    console.log(this.props.link)
-    //store.dispatch( push_screen( this.props.link ));
+    if(this.props.link !== undefined)
+      store.dispatch( push_screen( this.props.link ));
   }
   render() {
     return (
