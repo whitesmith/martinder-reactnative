@@ -8,15 +8,32 @@ import {
   TouchableOpacity,
   Alert,
   Platform,
+  NativeModules,
+  DatePickerAndroid,
 } from 'react-native';
 import colors from '../styles';
 import styles from '../styles';
 import NavBar from './NavBar';
 import BorderedButton from './BorderedButton';
+var DatePickerDialog = NativeModules.DatePickerDialog;
 
 const onPressDateTime = () => {
   if (Platform.OS === 'ios') {
-    Alert.alert('Events button pressed!');
+    DatePickerDialog.showPicker('Date and Time');
+  }
+  else {
+    try {
+      const {action, year, month, day} = await DatePickerAndroid.open({
+        // Use `new Date()` for current date.
+        // May 25 2020. Month 0 is January.
+        date: new Date(2020, 4, 25)
+      });
+      if (action !== DatePickerAndroid.dismissedAction) {
+        // Selected year, month (0-11), day
+      }
+    } catch ({code, message}) {
+      console.warn('Cannot open date picker', message);
+    }
   }
 };
 
