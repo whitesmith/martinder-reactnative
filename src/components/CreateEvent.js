@@ -45,11 +45,7 @@ class CreateEvent extends Component {
           </Text>
         </ScrollView>
         <View style={styles.footer}>
-          <TouchableOpacity>
-            <Text style={styles.button}>
-              CREATE
-            </Text>
-          </TouchableOpacity>
+          <BorderedButton title="CREATE"/>
         </View>
       </View>
     );
