@@ -24,7 +24,7 @@ class Events extends Component {
         </View>
         <ScrollView style={styles.scrollView}>
           <Text style={styles.subheaderTitle}>
-            Are those events you looking for?
+            Are these the events you're looking for?
           </Text>
           <EventCell />
           <EventCell />
