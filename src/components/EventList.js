@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import styles from '../styles';
 import EventCell from './EventCell';
+import NavBar from './NavBar';
 import TabBar from './TabBar';
 
 import store from '../store';
@@ -22,11 +23,7 @@ class EventList extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style={styles.header}>
-          <Image style={styles.logo}
-            source={require('../../res/img/QlutchLogo.png')}
-          />
-        </View>
+        <NavBar />
         <ScrollView style={styles.scrollView}>
           <Text style={styles.subheaderTitle}>
             Are these the events you're looking for?
