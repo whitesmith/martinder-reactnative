@@ -8,7 +8,8 @@ import { pop_screen } from './actions'
 
 import styles from './styles';
 
-import EventList from './components/EventList';
+import Feed from './components/Feed';
+import Going from './components/Going';
 import CreateEvent from './components/CreateEvent';
 
 const {
@@ -35,14 +36,14 @@ class Navigator extends Component {
   }
   _renderScene(sceneProps) {
     switch (sceneProps.scene.route.key) {
-      case 'EventList':
-        return <EventList />;
+      case 'Feed':
+        return <Feed />;
+      case 'Going':
+        return <Going />;
       case 'CreateEvent':
         return <CreateEvent />;
-      case 'Screen2':
-        return <EventList />;
       default:
-        return <EventList />;
+        return <Feed />;
     }
   }
 }
