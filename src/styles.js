@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
   },
   button: {
-    width: 120,
+    width: 135,
     padding: 15,
     paddingTop: 10,
     paddingBottom: 4,

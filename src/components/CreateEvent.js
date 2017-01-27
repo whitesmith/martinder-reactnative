@@ -72,14 +72,13 @@ class CreateEvent extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
+        <NavBar/>
         <ScrollView style={styles.scrollViewColored}>
           <View style={styles.detailHeader}>
 
             <TextInput style={styles.textInputCategory} placeholder='TYPE OF EVENT'>
-              {this.state.category}
             </TextInput>
             <TextInput style={styles.textInputTitle} placeholder='Event name'>
-              {this.state.title}
             </TextInput>
 
             <TouchableOpacity>
@@ -107,7 +106,6 @@ class CreateEvent extends Component {
             </TouchableOpacity>
           </View>
           <TextInput style={styles.detailDescription} placeholder='Description'>
-            {this.state.description}
           </TextInput>
         </ScrollView>
         <BorderedButton title="CREATE" disabled={!this.state.valid} onPress={this.onSubmit.bind(this)}/>

@@ -10,10 +10,16 @@ import {
 
 import styles from '../styles';
 
+import store from '../store';
+import { push_screen, set_events } from '../actions'
+
 class EventCell extends Component {
+  onPressCell() {
+    store.dispatch( push_screen ( "EventDetails" ));
+  }
   render() {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.onPressCell.bind(this)}>
         <View style={styles.row}>
           <Text style={styles.rowCategory}>
             {this.props.event.category}

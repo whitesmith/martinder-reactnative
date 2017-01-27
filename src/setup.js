@@ -11,6 +11,7 @@ import styles from './styles';
 import Feed from './components/Feed';
 import Going from './components/Going';
 import CreateEvent from './components/CreateEvent';
+import EventDetails from './components/EventDetails';
 
 const {
   CardStack: NavigationCardStack,
@@ -42,6 +43,8 @@ class Navigator extends Component {
         return <Going />;
       case 'CreateEvent':
         return <CreateEvent />;
+      case 'EventDetails':
+        return <EventDetails />;
       default:
         return <Feed />;
     }

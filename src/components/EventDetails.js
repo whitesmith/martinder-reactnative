@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 import styles from '../styles';
 import NavBar from './NavBar';
+import BorderedButton from './BorderedButton';
+
+import store from '../store';
+import { pop_screen, set_events } from '../actions'
 
 class EventDetails extends Component {
   render() {
@@ -47,11 +51,7 @@ class EventDetails extends Component {
              - 2,5e por pessoa;{'\n'}
           </Text>
         </ScrollView>
-        <View>
-          <Text>
-            Subscribe
-          </Text>
-        </View>
+        <BorderedButton title="SUBSCRIBE"/>
       </View>
     );
   }
