@@ -220,6 +220,20 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textAlign: 'center',
     letterSpacing: 2,
+  },
+  button_disabled: {
+    width: 120,
+    padding: 15,
+    paddingTop: 10,
+    paddingBottom: 4,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#B5B5B5',
+    borderColor: '#B5B5B5',
+    borderWidth: 2.5,
+    borderRadius: 22,
+    alignSelf: 'center',
+    textAlign: 'center',
+    letterSpacing: 2,
   }
 });
 

@@ -8,13 +8,19 @@ import {
 import styles from '../styles';
 
 class BorderedButtom extends Component {
+  onPress(){
+    if(!this.props.disabled)
+      this.props.onPress()
+  }
   render() {
     return (
-      <TouchableOpacity>
-        <Text style={styles.button}>
-          {this.props.title}
-        </Text>
-      </TouchableOpacity>
+      <View style={styles.footer}>
+        <TouchableOpacity onPress={this.onPress.bind(this)}>
+          <Text style={this.props.disabled ? styles.button_disabled : styles.button}>
+            {this.props.title}
+          </Text>
+        </TouchableOpacity>
+    </View>
     );
   }
 }
