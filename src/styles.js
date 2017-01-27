@@ -2,7 +2,17 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   header: {
+    flexDirection: 'row',
+    justifyContent: 'center',
     backgroundColor: '#5311B4',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowRadius: 3,
+    shadowOpacity: 0.5,
+    zIndex: 1,
   },
   headerTitle: {
     fontSize: 20,
@@ -102,6 +112,48 @@ const styles = StyleSheet.create({
   },
   rowParticipantsTotal: {
     color: '#5311B4',
+  },
+  backButton: {
+  },
+  detailHeader: {
+    padding: 12,
+    backgroundColor: '#5311B4',
+  },
+  detailSubheader: {
+    padding: 12,
+  },
+  detailTitle: {
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#fff',
+  },
+  detailCategory: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  detailDateTime: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#B5B5B5',
+  },
+  detailLocal: {
+    fontSize: 12,
+    fontFamily: 'Poppins-Regular',
+  },
+  detailParticipants: {
+    fontFamily: 'Poppins-SemiBold',
+    textAlign: 'right',
+  },
+  detailParticipantsTitle: {
+    fontSize: 10,
+    color: '#fff',
+  },
+  detailParticipantsGoing: {
+    fontSize: 20,
+    fontFamily: 'Poppins-SemiBold',
+    color: '#63FFAF',
+  },
+  detailParticipantsTotal: {
+    color: '#63FFAF',
   },
 });
 
