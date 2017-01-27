@@ -63,7 +63,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   scrollView: {
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+  },
+  scrollViewColored: {
+    backgroundColor: colors.brand,
   },
   logo: {
     width: 100,
@@ -125,6 +128,7 @@ const styles = StyleSheet.create({
   },
   detailSubheader: {
     padding: 12,
+    backgroundColor: '#fff',
   },
   detailTitle: {
     fontSize: 20,
@@ -159,6 +163,11 @@ const styles = StyleSheet.create({
   detailParticipantsTotal: {
     color: '#63FFAF',
   },
+  detailDescription: {
+    height: 320,
+    backgroundColor: '#fff',
+    padding: 10,
+  },
   textInputTitle: {
     height: 44,
     fontSize: 20,
@@ -173,6 +182,16 @@ const styles = StyleSheet.create({
   inputParticipants: {
     fontSize: 10,
     color: '#fff',
+    textDecorationLine: 'underline',
+  },
+  inputDateTime: {
+    fontFamily: 'Poppins-SemiBold',
+    color: '#B5B5B5',
+    textDecorationLine: 'underline',
+  },
+  inputLocal: {
+    fontSize: 12,
+    fontFamily: 'Poppins-Regular',
     textDecorationLine: 'underline',
   },
   footer: {

@@ -6,16 +6,26 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
+  Alert,
+  Platform,
 } from 'react-native';
+import colors from '../styles';
 import styles from '../styles';
 import NavBar from './NavBar';
+import BorderedButton from './BorderedButton';
+
+const onPressDateTime = () => {
+  if (Platform.OS === 'ios') {
+    Alert.alert('Events button pressed!');
+  }
+};
 
 class CreateEvent extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
         <NavBar/>
-        <ScrollView style={styles.scrollView}>
+        <ScrollView style={styles.scrollViewColored}>
           <View style={styles.detailHeader}>
             <TextInput style={styles.textInputCategory}
               placeholder='TYPE OF EVENT'>
@@ -23,26 +33,32 @@ class CreateEvent extends Component {
             <TextInput style={styles.textInputTitle}
               placeholder='Event name'>
             </TextInput>
-            <Text style={styles.detailParticipants}>
-              <Text style={styles.inputParticipants}>
-                PEOPLE NEEDED
+            <TouchableOpacity>
+              <Text style={styles.detailParticipants}>
+                  <Text style={styles.inputParticipants}>
+                    PEOPLE NEEDED
+                  </Text>
               </Text>
-            </Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.detailSubheader}>
-            <Text style={styles.detailDateTime}>
-              Set Date
-            </Text>
-            <Text style={styles.detailDateTime}>
-              Set Hour
-            </Text>
-            <Text style={styles.detailLocal}>
-              Select Localization
-            </Text>
+            <TouchableOpacity onPress={onPressDateTime}>
+              <Text style={styles.inputDateTime}>
+                Set Date
+              </Text>
+              <Text style={styles.inputDateTime}>
+                Set Hour
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.inputLocal}>
+                Select Localization
+              </Text>
+            </TouchableOpacity>
           </View>
-          <Text>
-             Description
-          </Text>
+          <TextInput style={styles.detailDescription}
+             placeholder='Description'>
+          </TextInput>
         </ScrollView>
         <View style={styles.footer}>
           <BorderedButton title="CREATE"/>
